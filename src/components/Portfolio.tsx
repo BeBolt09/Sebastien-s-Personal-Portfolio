@@ -1,11 +1,9 @@
-import React from 'react'
-
 export default function Portfolio() {
   return (
     <>
         <div className='flex justify-center pt-20'>
             <div className='font-mono text-3xl text-gray-600'>My works</div> 
-            <img src="src/assets/workicon.svg" className='h-10 w-auto'/>
+            <img src="src/assets/workicon.svg" className='ml-3 h-10 w-auto'/>
         </div>
 
         <div className='flex justify-center mt-5'>
