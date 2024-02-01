@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="bg-transparent p-0 flex items-center justify-between">
       <div className="flex items-center">
-        <img src="src/assets/Logo.png" className="h-12 w-auto" />
+        <img src="/Logo.png" className="h-12 w-auto" />
       </div>
       <div className="flex items-center space-x-20 font-mono">
         <a href="#" className="text-dark hover:text-gray-300">Portfolio</a>
@@ -13,8 +13,7 @@ const Navbar = () => {
       </div>
       <div className="flex items-center">
         <button className="flex text-dark py-2 rounded-md hover:h-10 font-mono">
-          <img src="src/assets/resumeicon.svg" className="h-8 w-auto" />
-          {/* <img src="src/assets/downloadbtn.svg" className="h-8 w-auto" /> */}
+          <img src="/resumeicon.svg" className="h-8 w-auto" />
         </button>
       </div>
     </nav>
