@@ -25,7 +25,7 @@ export default function AboutMe() {
                 of my best friends that year.
             </p>
             <div className="flex justify-center py-5">
-                <button className="flex py-2 rounded-md border-2 border-gray-600 px-5 hover:border-4 hover:font-bold">
+                <button className="flex py-2 rounded-md border-2 border-gray-600 px-5 hover:font-bold">
                     <p className="text-dark font-mono p-2">What got me into tech</p>
                     <img src="src/assets/arrow-right.svg" className="h-10 w-auto" />
                 </button>

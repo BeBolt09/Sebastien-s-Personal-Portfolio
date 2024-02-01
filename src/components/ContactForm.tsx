@@ -25,9 +25,11 @@ export const ContactUs = () => {
                 <input type="email" name="user_email" className='border-2 border-gray-600 rounded'/>
             </div>
         </div>
-        <div className=' mx-5'>
+        <div className='flex justify-center'>
+        <div className='mx-5'>
             <label><p className='text-gray-600 text-bold font-mono text-xl text-left'>Message</p></label>
-            <textarea name="message" />
+            <textarea name="message" className='border-2 border-gray-600 rounded'/>
+        </div>
         </div>
       <p><input type="submit" value="Send" /></p>
     </form>
