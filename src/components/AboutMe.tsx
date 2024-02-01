@@ -5,7 +5,7 @@ export default function AboutMe() {
         <div className='font-mono text-3xl text-gray-600'>About Me</div> 
         <img src="src/assets/hat.svg" className='ml-3 h-10 w-auto'/>
     </div>
-    <div className='flex pt-16'>
+    <div className='flex pt-5'>
         <img src="src/assets/Belgium outline.gif" className=""/>
         <div>
             <p className='font-mono text-left text-gray-600 m-5'>
@@ -24,14 +24,16 @@ export default function AboutMe() {
                 ways of living in Santa Barbara. Little did I know that I would make some 
                 of my best friends that year.
             </p>
+            <div className="flex justify-center py-5">
+                <button className="flex py-2 rounded-md border-2 border-gray-600 px-5 hover:border-4 hover:font-bold">
+                    <p className="text-dark font-mono p-2">What got me into tech</p>
+                    <img src="src/assets/arrow-right.svg" className="h-10 w-auto" />
+                </button>
+            </div>
         </div>
     </div>
-    <div className="flex justify-center py-5">
-        <button className="flex py-2 rounded-md border-2 border-gray-600">
-            <p className="text-dark font-mono p-2">More</p>
-            <img src="src/assets/arrow-right.svg" className="h-10 w-auto" />
-        </button>
-      </div>
+
+    <div className="mt-10 border-b border-2 border-gray-600"></div>
     </>
   )
 }
