@@ -3,7 +3,7 @@ const Intro = () => {
     <>
     <div className='flex'>
         <div>
-            <div className="flex items-center justify-start pt-48">
+            <div id="intro" className="flex items-center justify-start pt-48">
                 <div className="text-6xl text-gray-600 font-mono">
                     Sebastien Dupont
                 </div>

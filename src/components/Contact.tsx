@@ -17,7 +17,7 @@ const form = useRef<HTMLFormElement>(null);
   return (
     <>
         <div className='flex justify-center pt-20'>
-            <div className='font-mono text-3xl text-gray-600'>Contact</div> 
+            <div id="contact-section" className='font-mono text-3xl text-gray-600'>Contact</div> 
             <img src="/mail.svg" className='ml-3 h-10 w-auto'/>
         </div>
 

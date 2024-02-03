@@ -1,4 +1,4 @@
-// src/components/Navbar.js
+import React, { useRef } from 'react';
 
 const Navbar = () => {
   return (
@@ -7,9 +7,15 @@ const Navbar = () => {
         <img src="/Logo.png" className="h-12 w-auto" />
       </div>
       <div className="flex items-center space-x-20 font-mono">
-        <a href="#" className="text-dark hover:text-gray-300">Portfolio</a>
-        <a href="#" className="text-dark hover:text-gray-300">About Me</a>
-        <a href="#" className="text-dark hover:text-gray-300">Contact</a>
+        <button className="text-dark hover:text-gray-300" onClick={() => window.scrollTo({ top: 240, behavior: "smooth" })}>
+          Portfolio
+        </button>
+        <button className="text-dark hover:text-gray-300" onClick={() => window.scrollTo({ top: 960, behavior: "smooth" })}>
+          About Me
+        </button>
+        <button className="text-dark hover:text-gray-300" onClick={() => window.scrollTo({ top: 2000, behavior: "smooth" })}>
+          Contact
+        </button>
       </div>
       <div className="flex items-center">
         <button className="flex text-dark py-2 rounded-md hover:h-10 font-mono">
