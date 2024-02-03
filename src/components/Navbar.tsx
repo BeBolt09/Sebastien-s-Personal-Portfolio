@@ -1,5 +1,3 @@
-import React, { useRef } from 'react';
-
 const Navbar = () => {
   return (
     <nav className="bg-transparent p-0 flex items-center justify-between">

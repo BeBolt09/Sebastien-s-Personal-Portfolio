@@ -21,13 +21,22 @@ const form = useRef<HTMLFormElement>(null);
             <img src="/mail.svg" className='ml-3 h-10 w-auto'/>
         </div>
 
-        <div className='flex items-center'>
-            <div className='max-w-md mx-auto m-14 border-2 border-gray-600 rounded-lg'>
-                <p className='text-2xl font-mono text-gray-600 p-10'>Find me here!</p>
-                <div className='max-w-md mx-auto m-14 border-2'>
-                    <p className='flex justify-center'><a href="https://linkedin.com"><img src="/linkedin.svg" className='color:text-blue-600 h-10 w-auto'/></a></p>
-                    <p className='flex justify-center'><a href="https://youtube.com"><img src="/Youtube.svg" className='color:text-blue-600 h-10 w-auto'/></a></p>
-                    <p className='flex justify-center'><a href="sebastiengdupont@gmail.com"><img src="/Email.svg" className='color:text-blue-600 h-10 w-auto'/></a></p>
+        <div className='flex items-center px-14 mx-14'>
+            <div className='p-14'>
+                <p className='text-2xl text-start font-mono text-gray-600'>Send me a Message!</p>
+                <div className='max-w-md mx-auto border-2 border-gray-600 rounded-lg'>
+                    <div className='flex justify-center max-w-md mx-auto m-5'>
+                        <p className='text-md text-start font-mono text-gray-600 flex justify-center mx-5'> Thank you for visiting my portfolio! I would love to hear from you. Whether you have a project in mind, want to collaborate, or just want to say hello, feel free to leave me a message!</p>
+                    </div>
+                </div>
+                <div className='h-20'></div>
+                <p className='text-2xl text-start font-mono text-gray-600'>Find me here!</p>
+                <div className='max-w-md mx-auto m border-2 border-gray-600 rounded-lg'>
+                    <div className='flex justify-center max-w-md mx-auto m-5'>
+                        <p className='flex justify-center mx-5'> <a href="https://www.linkedin.com/in/sebastien-dupont-15b53826a/" target="_blank"><img src="/linkedin.svg" className='color:text-blue-600 h-10 w-auto'/></a></p>
+                        <p className='flex justify-center mx-5'> <a href="https://www.youtube.com/channel/UCPdiIqboPWgmxHFKE3PoUrA" target="_blank"><img src="/Youtube.svg" className='color:text-blue-600 h-10 w-auto'/></a></p>
+                        <p className='flex justify-center mx-5'><a href="sebastiengdupont@gmail.com"><img src="/Email.svg" className='color:text-blue-600 h-10 w-auto'/></a></p>
+                    </div>
                 </div>
             </div>
 
