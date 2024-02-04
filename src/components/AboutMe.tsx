@@ -5,8 +5,8 @@ export default function AboutMe() {
         <div className='font-mono text-3xl text-gray-600'>About Me</div> 
         <img src="/hat.svg" className='ml-3 h-10 w-auto'/>
     </div>
-    <div className='flex pt-5'>
-        <img src="/Belgium outline.gif" className=""/>
+    <div className='flex lg:flex-row md:flex-col sm:flex-col pt-5'>
+        <img src="/Belgium outline.gif" className="object-contain"/>
         <div>
             <p className='font-mono text-left text-gray-600 m-5'>
                 I was born and raised in Belgium, specifically in a small town called 
