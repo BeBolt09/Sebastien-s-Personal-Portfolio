@@ -1,4 +1,19 @@
+import { useState } from "react";
+
 const Navbar = () => {
+  const [isResumeDownloadedVisible, setResumeDownloadedVisible] = useState(false);
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Resume.pdf';
+    link.download = 'Sebastien-Dupont-Resume.pdf';
+    link.click();
+    setResumeDownloadedVisible(true);
+    setTimeout(() => {
+        setResumeDownloadedVisible(false);
+      }, 2500);
+  };
+  
+
   return (
     <nav className="bg-transparent p-0 flex items-center justify-between">
       <div className="flex items-center">
@@ -16,9 +31,14 @@ const Navbar = () => {
         </button>
       </div>
       <div className="flex items-center">
-        <button className="flex text-dark py-2 rounded-md hover:h-10 font-mono">
+        <button onClick={handleDownload} className="flex text-dark py-2 rounded-md hover:h-10 font-mono">
           <img src="/resumeicon.svg" className="h-8 w-auto" />
         </button>
+        {isResumeDownloadedVisible && (
+        <div className="fixed top-20 right-7 p-2 border-2 border-gray-600 rounded-lg font-bold font-mono text-green-600">
+          Downloaded Resume!
+        </div>
+      )}
       </div>
     </nav>
   );
