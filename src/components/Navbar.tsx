@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-transparent p-0 flex items-center justify-between">
-      <div className="flex items-center">
+      <div className="flex items-center invisible md:visible lg:visible">
         <img src="/Logo.png" className="h-12 w-auto" />
       </div>
       <div className="flex items-center space-x-20 font-mono">
@@ -30,7 +30,7 @@ const Navbar = () => {
           Contact
         </button>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center invisible md:visible lg:visible">
         <button onClick={handleDownload} className="flex text-dark py-2 rounded-md hover:h-10 font-mono">
           <img src="/resumeicon.svg" className="h-8 w-auto" />
         </button>

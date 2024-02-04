@@ -53,7 +53,7 @@ export default function Contact(){
             <img src="/mail.svg" className='ml-3 h-10 w-auto'/>
         </div>
 
-        <div className='flex items-center px-14 mx-14'>
+        <div className='flex flex-col md:flex-row lg:flex-row items-center px-14 mx-14'>
             <div className='p-14'>
                 <p className='text-2xl text-start font-mono text-gray-600'>Send me a Message!</p>
                 <div className='max-w-md mx-auto border-2 border-gray-600 rounded-lg'>
@@ -72,8 +72,8 @@ export default function Contact(){
                 </div>
             </div>
 
-            <form ref={form} onSubmit={sendEmail} className='max-w-md mx-auto p-14 m-14 border-2 border-gray-600 rounded-lg flex flex-col'>
-                <div className='flex justify-center mb-5'>
+            <form ref={form} onSubmit={sendEmail} className='border-2 border-gray-600 rounded-lg flex flex-col sm:m-0'>
+                <div className='flex justify-center m-5'>
                     <div className='mx-2 flex-1'>
                         <label><p className='text-gray-600 text-bold font-mono text-xl text-left'>Name</p></label>
                         <input type="text" id='name-id' name="user_name" className='w-full border-2 border-gray-600 rounded'/>
@@ -83,12 +83,12 @@ export default function Contact(){
                         <input type="email" id='email-id' name="user_email" className='w-full border-2 border-gray-600 rounded'/>
                     </div>
                 </div>
-                <div className='mx-2 mb-5'>
+                <div className='mx-7'>
                     <label><p className='text-gray-600 text-bold font-mono text-xl text-left'>Message</p></label>
                     <textarea id='message-id' name="message" className='h-24 w-full border-2 border-gray-600 rounded'/>
                 </div>
                 <div className='mt-5'>
-                    <button type="submit" onClick={clearInputArea} className='py-2 px-4 rounded-lg border-2 border-gray-600 hover:font-bold'>
+                    <button type="submit" onClick={clearInputArea} className='m-7 py-2 px-4 rounded-lg border-2 border-gray-600 hover:font-bold'>
                         <div className='flex'>
                             <p className='text-gray-600 font-mono hover:text-bold '>Send</p>
                             <img src="/send.svg" className='h-6 w-auto'/>
