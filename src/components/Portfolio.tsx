@@ -6,8 +6,8 @@ export default function Portfolio() {
             <img src="/workicon.svg" className='ml-3 h-10 w-auto'/>
         </div>
 
-        <div className='flex justify-center mt-5'>
-            <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
+        <div className='flex lg:flex-row sm:flex-col items-center justify-center mt-5 '>
+            <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5 ">
                 <img className="w-full p-4" src='/pic of chrome extension.png'/>
                 <div className="px-6 pb-4">
                     <div className="font-mono font-bold text-gray-600 text-xl mb-2">Chrome Extension</div>
