@@ -1,4 +1,13 @@
+import { useState } from "react"
+
+
 export default function Portfolio() {
+
+    const [showMore, setShowMore] = useState(false);
+    const handleSeeMoreClick = () => {
+      setShowMore(!showMore);
+    };
+
   return (
     <>
         <div className='flex justify-center pt-20'>
@@ -7,13 +16,14 @@ export default function Portfolio() {
         </div>
 
         {/* <div className='flex lg:flex-row sm:flex-col items-center justify-center mt-5 '> */}
-        <div className='flex flex-col lg:flex-row md:flex-col sm:flex-col items-center justify-center mt-5'>
-            <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5 ">
+        {/* <div className='flex flex-col lg:flex-row md:flex-col sm:flex-col items-center justify-center mt-5'> */}
+        <div className='grid lg:grid-cols-3 md:grid-cols-1 place-items-center gap-5 mt-5'>
+            <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
                 <img className="w-full p-4" src='/pic of chrome extension.png'/>
                 <div className="px-6 pb-4">
                     <div className="font-mono font-bold text-gray-600 text-xl mb-2">Chrome Extension</div>
                     <p className="font-mono text-gray-600 text-base text-left">
-                        I built a Chrome extension where users can get easy understanding of their browser productivity through visualizations, graphs, meaningful stats.
+                        Chrome extension where users can get easy understanding of their browser productivity through visualizations, graphs, meaningful stats.
                     </p>
                 </div>
             </div>
@@ -35,9 +45,22 @@ export default function Portfolio() {
                     </p>
                 </div>
             </div>
+            {showMore && (
+            <>
+            <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mt-5 mx-5 ">
+                <img className="w-full pt-8 pb-16 px-4" src='/WorkInProgress.jpg'/>
+                <div className="px-6 pb-4">
+                    <div className="font-mono font-bold text-gray-600 text-xl mb-2">In Progress</div>
+                    <p className="font-mono text-gray-600 text-base text-left">
+                        Exciting project for roomates incoming. Check back on 02/20
+                    </p>
+                </div>
+            </div>
+            </> 
+        )}
         </div>
         <div className='mt-5'>
-            <button><p className='font-mono text-gray-600 hover:text-gray-300'>See more</p></button>
+            <button onClick={handleSeeMoreClick}><p className='font-mono text-gray-600 hover:text-gray-300'>See more</p></button>
         </div>
         <div className="mt-2 border-b border-2 border-gray-600"></div>
     </>
