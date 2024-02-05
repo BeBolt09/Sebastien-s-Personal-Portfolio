@@ -2,10 +2,13 @@ import { useState } from "react"
 
 
 export default function Portfolio() {
-
+    const [seeMore, setSeeMore] = useState(true)
+    const [seeLess, setSeeLess] = useState(false)
     const [showMore, setShowMore] = useState(false);
     const handleSeeMoreClick = () => {
       setShowMore(!showMore);
+      setSeeMore(!seeMore);
+      setSeeLess(!seeLess);
     };
 
   return (
@@ -60,7 +63,8 @@ export default function Portfolio() {
         )}
         </div>
         <div className='mt-5'>
-            <button onClick={handleSeeMoreClick}><p className='font-mono text-gray-600 hover:text-gray-300'>See more</p></button>
+            {seeMore && (<button onClick={handleSeeMoreClick}><p className='font-mono text-gray-600 hover:text-gray-300'>See more</p></button>) }
+            {seeLess && (<button onClick={handleSeeMoreClick}><p className='font-mono text-gray-600 hover:text-gray-300'>See less</p></button>)}
         </div>
         <div className="mt-2 border-b border-2 border-gray-600"></div>
     </>
