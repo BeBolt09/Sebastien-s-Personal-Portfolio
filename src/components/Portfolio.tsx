@@ -1,7 +1,13 @@
 import { useState } from "react"
+import { PopupWindows } from "./PopupWindows"
 
 
 export default function Portfolio() {
+    const [seePopup,setSeePopup] = useState(false)
+    const handleSeePopupClick =() => {
+        setSeePopup(!seePopup)
+    }
+    
     const [seeMore, setSeeMore] = useState(true)
     const [seeLess, setSeeLess] = useState(false)
     const [showMore, setShowMore] = useState(false);
@@ -21,8 +27,9 @@ export default function Portfolio() {
         {/* <div className='flex lg:flex-row sm:flex-col items-center justify-center mt-5 '> */}
         {/* <div className='flex flex-col lg:flex-row md:flex-col sm:flex-col items-center justify-center mt-5'> */}
         <div className='grid lg:grid-cols-3 md:grid-cols-1 place-items-center gap-5 mt-5'>
+            <button onClick={handleSeePopupClick}>
             <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
-                <img className="w-full p-4" src='/pic of chrome extension.png'/>
+                <img className="w-full p-4" src='/chrome-extension.png'/>
                 <div className="px-6 pb-4">
                     <div className="font-mono font-bold text-gray-600 text-xl mb-2">Chrome Extension</div>
                     <p className="font-mono text-gray-600 text-base text-left">
@@ -30,6 +37,7 @@ export default function Portfolio() {
                     </p>
                 </div>
             </div>
+            </button>
             <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
                 <img className="w-full p-4" src='/RandomeGallerypix.png'/>
                 <div className="px-6 pb-4">
@@ -67,6 +75,9 @@ export default function Portfolio() {
             {seeLess && (<button onClick={handleSeeMoreClick}><p className='font-mono text-gray-600 hover:text-gray-300'>See less</p></button>)}
         </div>
         <div className="mt-2 border-b border-2 border-gray-600"></div>
+
+        {seePopup && <PopupWindows onClose={handleSeePopupClick}/>}
+        
     </>
   )
 }
