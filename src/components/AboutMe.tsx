@@ -9,12 +9,13 @@ export default function AboutMe() {
     }
 
   return (
-    <>
+    <>  
+    <div className="bg-white">
         <div className='flex justify-center pt-20'>
             <div className='font-mono text-3xl text-gray-600'>About Me</div> 
             <img src="/hat.svg" className='ml-3 h-10 w-auto'/>
         </div>
-        <div className="bg-white">
+        
             <CardFlip isFlipped={isFlipped} containerClassName="">
                 <div key='front' className='flex flex-col lg:flex-row md:flex-col sm:flex-col pt-5'>
                     <img src="/Belgium outline.gif" className="object-contain"/>
@@ -71,8 +72,9 @@ export default function AboutMe() {
                         <img src="/computer-outlined.webp" className="w-5/12 object-contain"/>
                 </div>
             </CardFlip>
-        </div>
+        
         <div className="mt-10 border-b border-2 border-gray-600"></div>
+    </div>
     </>
   )
 }

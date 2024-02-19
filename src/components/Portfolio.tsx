@@ -2,21 +2,30 @@ import { useState } from "react"
 import { ChromePopupWindows } from "./PopupWindows/ChromeHistPopupWindows"
 import { LessonPlannerPopupWindows } from "./PopupWindows/LessonPlannerPopupWindow"
 import { RecipeMakerPopupWindows } from "./PopupWindows/RecipeMakerPopupWindows"
+import { ArtGalleryPopupWindows } from "./PopupWindows/ArtGalleryPopupWindow" 
+import { ContactTrackerPopupWindows } from "./PopupWindows/ContactTrackerPopupWindow"
 
 
 export default function Portfolio() {
     const [seeChrome,setSeePopup] = useState(false)
-    const [seeLessonPlanner,setSeeLessonPlanner] = useState(false)
-    const [seeRecipeMaker,setSeeRecipeMaker] = useState(false)
     const handleSeeChromeClick =() => {
         setSeePopup(!seeChrome)
     }
+    const [seeLessonPlanner,setSeeLessonPlanner] = useState(false)
     const handleSeeLessonPlannerClick =() => {
         setSeeLessonPlanner(!seeLessonPlanner)
     }
-
+    const [seeRecipeMaker,setSeeRecipeMaker] = useState(false)
     const handleSeeRecipeMakerClick =() => {
         setSeeRecipeMaker(!seeRecipeMaker)
+    }
+    const [seeArtGallery,setSeeArtGallery] = useState(false)
+    const handleSeeArtGalleryClick =() => {
+        setSeeArtGallery(!seeArtGallery)
+    }
+    const [seeContactTracker,setSeeContactTracker] = useState(false)
+    const handleSeeContactTrackerClick =() => {
+        setSeeContactTracker(!seeContactTracker)
     }
 
     const [seeMore, setSeeMore] = useState(true)
@@ -74,24 +83,30 @@ export default function Portfolio() {
 
             {showMore && (
             <>
-            <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
-                <img className="w-full p-4" src='/RandomeGallerypix.png'/>
-                <div className="px-6 pb-4">
-                    <div className="font-mono font-bold text-gray-600 text-xl mb-2">Virtual Gallery</div>
-                    <p className="font-mono text-gray-600 text-base text-left">
-                        Website that showcases a random piece of art and it's corresponding title and description from the Art Institute of Chicago's Gallery.
-                    </p>
+            <button onClick={handleSeeArtGalleryClick}>
+                <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
+                    <img className="w-full p-4" src='/RandomeGallerypix.png'/>
+                    <div className="px-6 pb-4">
+                        <div className="font-mono font-bold text-gray-600 text-xl mb-2">Virtual Gallery</div>
+                        <p className="font-mono text-gray-600 text-base text-left">
+                            Website that showcases a random piece of art and it's corresponding title and description from the Art Institute of Chicago's Gallery.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
-                <img className="w-full p-4" src='/ContactTracker.png'/>
-                <div className="px-6 pb-4">
-                    <div className="font-mono font-bold text-gray-600 text-xl mb-2">Contact Tracker</div>
-                    <p className="font-mono text-gray-600 text-base text-left">
-                        Web App that allows you to create, retrieve, update and delete contacts. Save the Name, twitter account, image and notes on someone.
-                    </p>
+            </button>
+
+            <button onClick={handleSeeContactTrackerClick}>
+                <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
+                    <img className="w-full p-4" src='/ContactTracker.png'/>
+                    <div className="px-6 pb-4">
+                        <div className="font-mono font-bold text-gray-600 text-xl mb-2">Contact Tracker</div>
+                        <p className="font-mono text-gray-600 text-base text-left">
+                            Web App that allows you to create, retrieve, update and delete contacts. Save the Name, twitter account, image and notes on someone.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </button>
+
             </> 
         )}
         </div>
@@ -104,6 +119,8 @@ export default function Portfolio() {
         {seeChrome && <ChromePopupWindows onClose={handleSeeChromeClick}/>}
         {seeLessonPlanner && <LessonPlannerPopupWindows onClose={handleSeeLessonPlannerClick}/>}
         {seeRecipeMaker && <RecipeMakerPopupWindows onClose={handleSeeRecipeMakerClick}/>}
+        {seeArtGallery && <ArtGalleryPopupWindows onClose={handleSeeArtGalleryClick}/>}
+        {seeContactTracker && <ContactTrackerPopupWindows onClose={handleSeeContactTrackerClick}/>}
         
     </>
   )
