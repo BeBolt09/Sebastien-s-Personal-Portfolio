@@ -1,4 +1,4 @@
-export const PopupWindows = ({ onClose }: { onClose: () => void }) => {
+export const ChromePopupWindows = ({ onClose }: { onClose: () => void }) => {
   return (
     <>
             <div id='chrome-extension' className='fixed my-36 mx-64 max-h max-w rounded-2xl inset-0 border-2 border-gray-600 bg-white drop-shadow-2xl'>
