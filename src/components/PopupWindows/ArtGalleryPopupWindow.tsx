@@ -9,13 +9,15 @@ export const ArtGalleryPopupWindows = ({ onClose }: { onClose: () => void }) => 
                       </div>
               
                       <div className='flex flex-col justify-items-end m-2 '  style={{ flex: '4' }}>
-                          <p className='font-mono text-left text-gray-600 p-2 pt-16 pb-6'>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ad aut animi quia dignissimos itaque alias earum odio vero perferendis necessitatibus aspernatur, optio excepturi facere illo laudantium? Minima quo reprehenderit rerum architecto qui dignissimos iure!
+                          <p className='font-mono text-left text-gray-600 p-2 pt-16 pb-6 text-base'>
+                          Online art gallery utilizing the Chicago Art Institute's API made with HTML, CSS, and JavaScript, hosted on Netlify. The project delivers a dynamic user experience, featuring diverse artworks on each visit, showcasing proficiency in API integration, front-end development, and web hosting. The platform serves as an engaging online art exploration experience.
                           </p>
                           <div className=''>
+                            <a href="https://cheery-elf-f69304.netlify.app/" target="_blank">
                               <button className='bg-blue-400 rounded-lg justify-items-center'>
                                   <p className='px-14 py-4'>View</p>
                               </button>
+                            </a>
                           </div>
                       </div>
                   </div>
