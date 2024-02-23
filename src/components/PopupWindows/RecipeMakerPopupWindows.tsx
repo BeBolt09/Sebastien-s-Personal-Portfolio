@@ -10,12 +10,14 @@ export const RecipeMakerPopupWindows = ({ onClose }: { onClose: () => void }) =>
               
                       <div className='flex flex-col justify-items-end m-2 '  style={{ flex: '4' }}>
                           <p className='font-mono text-left text-gray-600 p-2 pt-16 pb-6'>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ad aut animi quia dignissimos itaque alias earum odio vero perferendis necessitatibus aspernatur, optio excepturi facere illo laudantium? Minima quo reprehenderit rerum architecto qui dignissimos iure!
+                          Utilize my recipe maker web app: Input your ingredients, receive customized recipes. Built with React.js, Vite, TailwindCSS, and Google's Gemini AI integration for seamless cooking inspiration.
                           </p>
                           <div className=''>
+                            <a href="https://ericacooks.netlify.app" target="_blank">
                               <button className='bg-blue-400 rounded-lg justify-items-center'>
                                   <p className='px-14 py-4'>View</p>
                               </button>
+                            </a>
                           </div>
                       </div>
                   </div>

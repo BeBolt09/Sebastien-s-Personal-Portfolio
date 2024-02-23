@@ -10,12 +10,14 @@ export const ChromePopupWindows = ({ onClose }: { onClose: () => void }) => {
             
                     <div className='flex flex-col justify-items-end m-2 '  style={{ flex: '4' }}>
                         <p className='font-mono text-left text-gray-600 p-2 pt-16 pb-6'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ad aut animi quia dignissimos itaque alias earum odio vero perferendis necessitatibus aspernatur, optio excepturi facere illo laudantium? Minima quo reprehenderit rerum architecto qui dignissimos iure!
+                        Built a modern Chrome Extension with a React.js, Vite and Manifest V3 App that communicates with my Flask API that I created for the backend processing of the user's information.Use this chrome extension to get detailed stats and graphs about your browser productivity and usage!
                         </p>
                         <div className=''>
-                            <button className='bg-blue-400 rounded-lg justify-items-center'>
-                                <p className='px-14 py-4'>View</p>
-                            </button>
+                            <a href="https://chromewebstore.google.com/detail/history-stats-visualizer/idfgioaelkhjhfbfejjoakojomfaojig" target="_blank">
+                                <button className='bg-blue-400 rounded-lg justify-items-center'>
+                                    <p className='px-14 py-4'>View</p>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>

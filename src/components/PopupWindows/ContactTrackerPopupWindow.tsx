@@ -9,13 +9,15 @@ export const ContactTrackerPopupWindows = ({ onClose }: { onClose: () => void })
                       </div>
               
                       <div className='flex flex-col justify-items-end m-2 '  style={{ flex: '4' }}>
-                          <p className='font-mono text-left text-gray-600 p-2 pt-16 pb-6'>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ad aut animi quia dignissimos itaque alias earum odio vero perferendis necessitatibus aspernatur, optio excepturi facere illo laudantium? Minima quo reprehenderit rerum architecto qui dignissimos iure!
+                          <p className='font-mono text-sm text-left text-gray-600 p-2 pt-16 pb-6'>
+                          Developed a Contact Tracker App using React. Implemented features for adding, editing, and deleting contacts, along with advanced search capabilities. Prioritized user experience through comprehensive error handling and demonstrated mastery in React Router, state management, and CRUD operations. The dynamic contact management application reflects a keen focus on user interactions and error resilience.
                           </p>
                           <div className=''>
+                            <a href="https://contact-tracker.netlify.app/" target="_blank">
                               <button className='bg-blue-400 rounded-lg justify-items-center'>
                                   <p className='px-14 py-4'>View</p>
                               </button>
+                            </a>
                           </div>
                       </div>
                   </div>
