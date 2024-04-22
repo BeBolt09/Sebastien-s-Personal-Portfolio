@@ -2,7 +2,8 @@ const Intro = () => {
   return (
     <>
     <div className='flex'>
-        <div>
+        <img src="/CircleProfilePic.png" className='ml-20 h-80 w-auto mt-14'/>
+        <div className="ml-10">
             <div id="intro" className="flex items-center justify-start pt-48">
                 <div className="text-6xl text-gray-600 font-mono">
                     Sebastien Dupont

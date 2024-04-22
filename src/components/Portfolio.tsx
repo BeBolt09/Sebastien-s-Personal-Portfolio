@@ -4,9 +4,14 @@ import { LessonPlannerPopupWindows } from "./PopupWindows/LessonPlannerPopupWind
 import { RecipeMakerPopupWindows } from "./PopupWindows/RecipeMakerPopupWindows"
 import { ArtGalleryPopupWindows } from "./PopupWindows/ArtGalleryPopupWindow" 
 import { ContactTrackerPopupWindows } from "./PopupWindows/ContactTrackerPopupWindow"
+import { WorkoutAppPopupWindow } from "./PopupWindows/WorkoutAppPopupWindow"
 
 
 export default function Portfolio() {
+    const [seeWorkoutApp,setSeeWorkoutApp] = useState(false)
+    const handleSeeWorkoutApp =() => {
+        setSeeWorkoutApp(!seeWorkoutApp)
+    }
     const [seeChrome,setSeePopup] = useState(false)
     const handleSeeChromeClick =() => {
         setSeePopup(!seeChrome)
@@ -45,13 +50,13 @@ export default function Portfolio() {
         </div>
 
         <div className='grid lg:grid-cols-3 md:grid-cols-1 place-items-center gap-5 mt-5'>
-            <button onClick={handleSeeLessonPlannerClick}>
+            <button onClick={handleSeeWorkoutApp}>
                 <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
-                    <video autoPlay loop muted playsInline src="/Lesson Planner Demo .mp4" className="rounded w-full px-4 pt-10 pb-9"/>
+                    <img src="/SwapFitAI.png" className="rounded w-full px-4 pt-10 pb-9"/>
                     <div className="px-6 pb-4">
                         <div className="font-mono font-bold text-gray-600 text-xl mb-2">Lesson Planner</div>
                         <p className="font-mono text-gray-600 text-base text-left">
-                            I created a Lesson Planner application that let's anyone generate lesson plans with AI by entering subject, grade level and time frame.
+                            During my time as a Software Developer at Co.Lab, I worked on this app. We used React Native and google's Gemini AI. two words
                         </p>
                     </div>
                 </div>
@@ -83,6 +88,18 @@ export default function Portfolio() {
 
             {showMore && (
             <>
+            <button onClick={handleSeeLessonPlannerClick}>
+                <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
+                    <video autoPlay loop muted playsInline src="/Lesson Planner Demo .mp4" className="rounded w-full px-4 pt-10 pb-9"/>
+                    <div className="px-6 pb-4">
+                        <div className="font-mono font-bold text-gray-600 text-xl mb-2">Lesson Planner</div>
+                        <p className="font-mono text-gray-600 text-base text-left">
+                            I created a Lesson Planner application that let's anyone generate lesson plans with AI by entering subject, grade level and time frame.
+                        </p>
+                    </div>
+                </div>
+            </button>
+            
             <button onClick={handleSeeArtGalleryClick}>
                 <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
                     <img className="w-full p-4" src='/RandomeGallerypix.png'/>
@@ -116,6 +133,7 @@ export default function Portfolio() {
         </div>
         <div className="mt-2 border-b border-2 border-gray-600"></div>
 
+        {seeWorkoutApp && <WorkoutAppPopupWindow onClose={handleSeeWorkoutApp}/>}
         {seeChrome && <ChromePopupWindows onClose={handleSeeChromeClick}/>}
         {seeLessonPlanner && <LessonPlannerPopupWindows onClose={handleSeeLessonPlannerClick}/>}
         {seeRecipeMaker && <RecipeMakerPopupWindows onClose={handleSeeRecipeMakerClick}/>}
