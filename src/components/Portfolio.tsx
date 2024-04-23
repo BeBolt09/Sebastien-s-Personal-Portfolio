@@ -54,7 +54,7 @@ export default function Portfolio() {
                 <div className="max-w-sm rounded-lg overflow-hidden border-2 border-gray-500 shadow-lg mx-5">
                     <img src="/SwapFitAI.png" className="rounded w-full px-4 pt-10 pb-9"/>
                     <div className="px-6 pb-4">
-                        <div className="font-mono font-bold text-gray-600 text-xl mb-2">Lesson Planner</div>
+                        <div className="font-mono font-bold text-gray-600 text-xl mb-2">Swapfit AI</div>
                         <p className="font-mono text-gray-600 text-base text-left">
                             During my time as a Software Developer at Co.Lab, I worked on this app. We used React Native and google's Gemini AI. two words
                         </p>
