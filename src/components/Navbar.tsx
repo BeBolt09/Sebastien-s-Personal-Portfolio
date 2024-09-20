@@ -4,7 +4,7 @@ const Navbar = () => {
   const [isResumeDownloadedVisible, setResumeDownloadedVisible] = useState(false);
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Resume.pdf';
+    link.href = '/SebastienDupontResume09_24.pdf';
     link.download = 'Sebastien-Dupont-Resume.pdf';
     link.click();
     setResumeDownloadedVisible(true);
